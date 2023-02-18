@@ -1,6 +1,6 @@
 # rewarded interstitial ads
 
-Rewarded full screen ads which are commonly displayed at break-points in an app, rewarding a user for a longer ad.
+Rewarded full screen ads which are commonly displayed at break-points in an app, rewarding a user for a longer ad. <br>
 Ask the user if they want to watch an ad to get a reward before calling the showRewardedInterstitial method.
 
 jump to: [rewarded](#rewarded-interstitial) | [showRewarded](#show-rewarded-interstitial) | [Example](#example)
@@ -18,7 +18,10 @@ adMob.rewardedInterstitial(rewarded_interstitial_id).then(function () {
     // reward video ad is ready to be shown
     return adMob.showRewardedInterstitial();
 }).then(function(reward){
-    alert("showed rewarded ads"+JSON.stringify(reward));
+    // finished showing rewarded ads
+    if (reward.rewarded){
+        // user earned reward for watching the ad
+    }
 }).catch (function(err){
     // view or handle error messages
 });
@@ -31,7 +34,7 @@ adMob.rewardedInterstitial(rewarded_interstitial_id).then(function () {
  - use at break-points in the app to show full screen ads if the user chooses to view a full one in exchange for a reward that you've set
 
 ## Parameters:
-` - Google AdMob id for a rewarded interstitial ad `
+` - Google AdMob id for a rewarded interstitial ad ` <br>
 can be `"test"` for test ads, and ad string (`"ca-app-pub-4029587076166791/6431168058"`), or an ad_id object:
 ```
 var admob_ids = {
@@ -57,7 +60,8 @@ adMob.showRewarded().then(function (reward) {
     // do anything after rewarded ad was dismissed
     // eg. unpause a game that was paused to show the full screen ad
     if (reward.rewarded){
-        alert("gained "+reward.amount+" "+reward.type);
+        // give user the reward they earned
+        // can view reward.amount and reward.type
     }
 }).catch (function(err){
     // view or handle error messages
@@ -87,9 +91,9 @@ status of the whether the rewarded video ad was watched
 - error["responseCode"]     //ad error response code from Google (if there is one)
 - error["responseMessage"]  //ad error response message from Google (if there is one)
 ```
-common error names:
-LOAD_AD_ERROR may occur when an ad id is not reconized or not ready to show ads yet
-SHOW_AD_ERROR will occur when an ad is called to show before it is ready
+common error names: <br>
+- `LOAD_AD_ERROR` may occur when an ad id is not reconized or not ready to show ads yet
+- `SHOW_AD_ERROR` will occur when an ad is called to show before it is ready
 
 # Example <a id="example"></a><br>
 ```js
