@@ -26,7 +26,7 @@ adMob.interstitial(interstitial_id).then(function () {
  - use at break-points in the app to show full screen ads which the user can dismiss
 
 ## Parameters:
-` - Google AdMob id for a interstitial ad `
+` - Google AdMob id for a interstitial ad ` <br>
 can be `"test"` for test ads, and ad string (`"ca-app-pub-4029587076166791/6431168058"`), or an ad_id object:
 ```
 var admob_ids = {
@@ -71,9 +71,9 @@ adMob.showInterstitial().then(function () {
 - error["responseCode"]     //ad error response code from Google (if there is one)
 - error["responseMessage"]  //ad error response message from Google (if there is one)
 ```
-common error names:
-LOAD_AD_ERROR may occur when an ad id is not reconized or not ready to show ads yet
-SHOW_AD_ERROR will occur when an ad is called to show before it is ready
+common error names: <BR>
+- `LOAD_AD_ERROR` may occur when an ad id is not reconized or not ready to show ads yet <BR>
+- `SHOW_AD_ERROR` will occur when an ad is called to show before it is ready <BR>
 
 # Example <a id="example"></a><br>
 ```js
