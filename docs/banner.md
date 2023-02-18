@@ -25,7 +25,7 @@ adMob.banner(banner_id).then(function () {
  - use after the start up of the device (`onDeviceReady`)
 
 ## Parameters:
-` - Google AdMob id for a banner ad `
+` - Google AdMob id for a banner ad ` <br>
 can be `"test"` for test ads, and ad string (`"ca-app-pub-4029587076166791/6431168058"`), or an ad_id object:
 ```
 var admob_ids = {
@@ -51,8 +51,8 @@ var admob_ids = {
 - error["responseCode"]     //ad error response code from Google (if there is one)
 - error["responseMessage"]  //ad error response message from Google (if there is one)
 ```
-common error names:
-LOAD_AD_ERROR may occur when an ad id is not reconized or not ready to show ads yet
+common error names: <br>
+- `LOAD_AD_ERROR` may occur when an ad id is not reconized or not ready to show ads yet
 
 ## Tips:
 
