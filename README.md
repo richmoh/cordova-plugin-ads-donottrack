@@ -3,7 +3,8 @@
 jump to: [PLUGIN USAGE](#plugin-usage) | [Cordova](#create-app) | [ADD ADS](#add-ads) | [More](#more-plugin) | [cozycode.ca](#more-cozycode) | [Open Source License](#license) 
 <hr/>
 
-Updated __2023__ for [Cordova](https://cordova.apache.org/) with no tracking consent requested
+Updated __2023__ for [Cordova](https://cordova.apache.org/) with no tracking consent requested <br>
+Make sure to turn off `"user metrics"` in advertising settings to disable tracking <br>
 To include ads with tracking, see: [cordova-plugin-ads](https://github.com/cozycodegh/cordova-plugin-ads)
 
 ***Cordova*** plugin to add ***ads*** (by Google AdMob) into an app. <br>
@@ -15,24 +16,26 @@ Have a good one!
 
 # PLUGIN USAGE<a id="plugin-usage"></a><br>
 
-Add these calls inside of your cordova JavaScript to show ads:
-banner ads
+Add these calls inside of your cordova JavaScript to show ads: <br>
+
+<ins>banner ads</ins> <br>
 [`adMob.banner(bannerId)`](docs/banner.md) <br>
 [`adMob.removeBanner()`](docs/banner.md#remove-banner) <br>
-full screen ads
+
+<ins>full screen ads </ins><br>
 [`adMob.interstitial(interstitialId)`](docs/interstitial.md)  <br>
 [`adMob.showInterstitial()`](docs/interstitial.md#show-interstitial)  <br>
-rewarded video ads
+
+<ins>rewarded video ads </ins><br>
 [`adMob.rewarded(rewardedId)`](docs/rewarded.md)  <br>
 [`adMob.showRewarded()`](docs/rewarded.md#show-rewarded)  <br>
-rewarded full screen video ads (new, and better supported than rewarded ads)
-[`adMob.rewardedInterstitial(rewardedInterstitialId)`](docs/rewarded-interstitial.md)  <br>
-[`adMob.showRewardedInterstitial()`](docs/rewarded-interstitial.md#show-rewarded-interstitial)  <br>
+
+<ins>rewarded full screen video ads</ins> (new, and better supported than rewarded ads) <br>
+[`adMob.rewardedInterstitial(rewardedInterstitialId)`](docs/rewardedInterstitial.md)  <br>
+[`adMob.showRewardedInterstitial()`](docs/rewardedInterstitial.md#show-rewarded-interstitial)  <br>
 
 The plugin creates an `adMob` object that can request to load new ads. <br>
 Note: to fund the development of the plugin, the plugin requests 2% of ads for the plugin developer. <br>
-
-[see more on using the plugin](docs/pluginAPI.md)
 
 # CREATE AN APP WITH CORDOVA<a id="create-app"></a><br>
 
@@ -54,7 +57,7 @@ Cordova is an open source project maintained by Apache that lets you make apps w
 cordova plugin add cordova-plugin-ads
 ```
     
-2. Test that ads are working using test banners, use the id "test" to load test banners from the plugin
+2. Test that ads are working using test ads. Use the id `"test"` to load test ads from the plugin.
 ```
 var test_ad_id = "test";
 
@@ -149,7 +152,7 @@ adMob.rewardedInterstitial(admob_ids).then(function(){
 });
 ```
 
-##More on the plugin: <a id="more-plugin"></a><br>
+## More on the plugin: <a id="more-plugin"></a><br>
 - wait for `deviceready` to fire before calling any functions <br>
 - errors can be automatically retried after a timeout or ignored <br>
 - `adMob` uses a promise-based API to load ads <br>
