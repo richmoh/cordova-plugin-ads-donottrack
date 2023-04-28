@@ -32,8 +32,8 @@ cordova plugin add cordova-plugin-ads-donottrack
 2. Turn off `user metrics` while creating AdMob apps with ad units
 
 3. Add calls to the plugin to load ads
-```
-adMob.banner("test")
+```js
+adMob.banner("test").catch(function(err){});
 ```
 
 [see cordova-plugin-ads documentation](https://github.com/cozycodegh/cordova-plugin-ads#add-ads)
