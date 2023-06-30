@@ -38,7 +38,7 @@
       <source-file src="src/ios/AdMobPlugin.m"/>
  
       <preference name="disableSDKCrashReporting" default="false" />
-      <preference name="ADMOB_IOS_APP_ID" default="ca-app-pub-1855415514372943~7447337312"/>
+      <preference name="ADMOB_IOS_APP_ID" default="ca-app-pub-1706190546932805~8234953719"/>
       
       <!--config-file target="*-Info.plist" parent="GADDelayAppMeasurementInit">
           <true/>
@@ -283,7 +283,7 @@
           <!-- set any: -->
           <meta-data
           android:name="com.google.android.gms.ads.APPLICATION_ID"
-          android:value="ca-app-pub-4029587076166791~9642866395"/>
+          android:value="ca-app-pub-1706190546932805~5608081778"/>
           <meta-data
           android:name="com.google.android.gms.ads.DELAY_APP_MEASUREMENT_INIT"
           android:value="true"/>
